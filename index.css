@@ -16,16 +16,23 @@ body
     margin: 5px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    background-color: #fff;
     text-align: left;
 }
 
 .card:hover
 {
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    box-shadow: 0 10px 10px rgba(0,0,0,.2);
+    transform: scale(1.25);
+    z-index: 1;
 }
 
-.grid:hover .card:not(:hover)
+.card:hover .name
+{
+    white-space: normal;
+}
+
+.grid:hover > .card:not(:hover)
 {
     opacity: .25;
 }
@@ -34,6 +41,16 @@ body
 {
     width: 100%;
     border-radius: 8px 8px 0 0;
+}
+
+.image:active
+{
+    transform: scale(2);
+}
+
+.text:active
+{
+    font-size: 1.5em;
 }
 
 .name
@@ -58,6 +75,7 @@ body
 
 .header
 {
+    z-index: 1;
     position: sticky;
     top: 0;
     overflow: auto;
