@@ -46,6 +46,7 @@ body
 .image:active
 {
     transform: scale(2);
+    border-radius: 8px;
 }
 
 .text:active
