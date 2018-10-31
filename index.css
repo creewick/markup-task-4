@@ -1,0 +1,155 @@
+body
+{
+    font-family: "Segoe UI Light";
+    margin: 0;
+}
+
+.grid
+{
+    text-align: center;
+}
+
+.card
+{
+    display: inline-block;
+    width: 240px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    text-align: left;
+}
+
+.card:hover
+{
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+
+.grid:hover .card:not(:hover)
+{
+    opacity: .25;
+}
+
+.image
+{
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.name
+{
+    font-weight: 100;
+    font-size: 24px;
+    margin: 0 10px 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.text
+{
+    margin: 16px 10px 10px;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.header
+{
+    position: sticky;
+    top: 0;
+    overflow: auto;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    margin-bottom: 10px;
+}
+
+.menu
+{
+    width: 32px;
+    height: 32px;
+    opacity: .5;
+    background-image: url('img/menu1.png'); 
+    margin: 8px;
+    float: left;
+}
+
+.menu:hover
+{
+    opacity: 1;
+}
+
+.title
+{
+    text-align: center;
+    font-weight: 100;
+    font-size: 28px;
+    margin: 4px;
+}
+
+.hide
+{
+    display: none;
+}
+
+.hide:checked ~ .header .menu
+{
+    background-image: url('img/menu2.png');
+}
+
+.hide:checked ~ .grid
+{
+    max-width: 600px;
+    margin: auto;
+}
+
+.hide:checked ~ .grid .card
+{
+    width: calc(100% - 14px);
+}
+
+.hide:checked ~ .grid .image
+{  
+    object-fit: cover;
+    object-position: 25% 25%;
+    height: 200px;
+}
+
+.hide:checked ~ .grid .hidden
+{
+    display: block;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .menu
+    {
+        display: none;
+    }
+
+    .grid
+    {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .card
+    {
+        width: calc(100% - 14px);
+    }
+
+    .image
+    {  
+        object-fit: cover;
+        object-position: 25% 25%;
+        height: 200px;
+    }
+
+    .hidden
+    {
+        display: block;
+    }
+}
