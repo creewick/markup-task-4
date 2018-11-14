@@ -32,11 +32,6 @@ body
     white-space: normal;
 }
 
-.grid:hover > .card:not(:hover)
-{
-    opacity: .25;
-}
-
 .image
 {
     width: 100%;
